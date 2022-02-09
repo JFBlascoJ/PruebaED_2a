@@ -2,8 +2,6 @@ package com.iescomercio.ed.bloque2.repaso.modelo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CursoTest {	
@@ -19,7 +17,7 @@ class CursoTest {
 		Curso c = new Curso();
 		int numAluAntes;
 		
-		c.aniadirAlumno(new Persona("123456789B", "Pepe", "Lopez"));
+		c.aniadirAlumno(new Persona("12345678B", "Pepe", "Lopez"));
 		
 		numAluAntes = c.numeroAlumnos();
 		
@@ -36,7 +34,16 @@ class CursoTest {
 
 	@Test
 	void testEstaRegistrado() {
-		fail("Not yet implemented");
+		Curso c = new Curso();
+		
+		c.aniadirAlumno(new Persona("12345678B", "Pepe", "Lopez"));		
+		c.aniadirAlumno(new Persona("15687456J", "Andrea", "García"));		
+		c.aniadirAlumno(new Persona("63214895O", "Luis", "Antúnez"));
+		
+		assertTrue(c.estaRegistrado("12345678B"));
+		assertTrue(c.estaRegistrado("15687456J"));
+		assertFalse(c.estaRegistrado("16600118Y"));
+		
 	}
 
 	@Test
