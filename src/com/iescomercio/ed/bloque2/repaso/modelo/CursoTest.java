@@ -72,7 +72,14 @@ class CursoTest {
 
 	@Test
 	void testCurso() {
-		fail("Not yet implemented");
+		Curso c1 = new Curso();
+		Curso c2 = new Curso();
+		
+		assertEquals(0, c1.numeroAlumnos() - c2.numeroAlumnos());
+		c1.aniadirAlumno(new Persona("12345678B", "Pepe", "Lopez"));		
+		c2.aniadirAlumno(new Persona("15687456J", "Andrea", "García"));
+		assertTrue(c1.numeroAlumnos() == c2.numeroAlumnos());
+		
 	}
 
 	@Test
