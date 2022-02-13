@@ -86,7 +86,13 @@ class PersonaTest {
 
 	@Test
 	void testGetApellido1() {
-		fail("Not yet implemented");
+		Persona p1 = new Persona("12345678B", "Pepe", "Lopez");		
+		Persona p2 = new Persona("15687456J", "Andrea", "García");		
+		Persona p3 = new Persona("63214895O", "Luis", "Antúnez");
+		
+		assertEquals("Lopez",p1.getApellido1());
+		assertEquals("García",p2.getApellido1());
+		assertEquals("Antúnez",p3.getApellido1());
 	}
 
 	@Test
