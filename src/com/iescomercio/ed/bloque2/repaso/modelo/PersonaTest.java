@@ -59,13 +59,17 @@ class PersonaTest {
 			e.printStackTrace();
 		}
 		
-		
-		
 	}
 
 	@Test
 	void testGetNombre() {
-		fail("Not yet implemented");
+		Persona p1 = new Persona("12345678B", "Pepe", "Lopez");		
+		Persona p2 = new Persona("15687456J", "Andrea", "García");		
+		Persona p3 = new Persona("63214895O", "Luis", "Antúnez");
+		
+		assertEquals("Pepe",p1.getNombre());
+		assertEquals("Andrea",p2.getNombre());
+		assertEquals("Luis",p3.getNombre());
 	}
 
 	@Test
