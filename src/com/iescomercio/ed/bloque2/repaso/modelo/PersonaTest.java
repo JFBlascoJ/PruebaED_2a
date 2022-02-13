@@ -40,7 +40,27 @@ class PersonaTest {
 
 	@Test
 	void testSetDni() {
-		fail("Not yet implemented");
+		Persona p1 = new Persona("12345678B", "Pepe", "Lopez");		
+		Persona p2 = new Persona("15687456J", "Andrea", "García");
+		
+		try {
+			p1.setDni("25647831P");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		assertThrows(Exception.class, ()-> p1.setDni("1564785"));
+		
+		try {
+			p2.setDni("35268547J");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
 	}
 
 	@Test
