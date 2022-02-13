@@ -29,7 +29,13 @@ class PersonaTest {
 
 	@Test
 	void testGetDni() {
-		fail("Not yet implemented");
+		Persona p1 = new Persona("12345678B", "Pepe", "Lopez");		
+		Persona p2 = new Persona("15687456J", "Andrea", "García");		
+		Persona p3 = new Persona("63214895O", "Luis", "Antúnez");
+		
+		assertEquals("12345678B",p1.getDni());
+		assertEquals("15687456J",p2.getDni());
+		assertEquals("63214895O",p3.getDni());
 	}
 
 	@Test
