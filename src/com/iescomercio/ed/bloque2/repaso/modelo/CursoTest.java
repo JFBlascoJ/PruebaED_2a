@@ -14,7 +14,7 @@ class CursoTest {
 		c.aniadirAlumno(new Persona("12345678B", "Pepe", "Lopez"));		
 		c.aniadirAlumno(new Persona("15687456J", "Andrea", "García"));		
 		c.aniadirAlumno(new Persona("63214895O", "Luis", "Antúnez"));
-		numAlumAntes = c.numeroAlumnos();		;
+		numAlumAntes = c.numeroAlumnos();
 		
 		try {
 			c.eliminarAlumno("12345678B");
@@ -72,8 +72,7 @@ class CursoTest {
 
 	@Test
 	void testCurso() {
-		Curso c1 = new Curso();
-		Curso c2 = new Curso();
+		Curso c1 = new Curso(), c2 = new Curso();
 		
 		assertEquals(0, c1.numeroAlumnos() - c2.numeroAlumnos());
 		c1.aniadirAlumno(new Persona("12345678B", "Pepe", "Lopez"));		
@@ -84,7 +83,19 @@ class CursoTest {
 
 	@Test
 	void testNumeroAlumnos() {
-		fail("Not yet implemented");
+		Curso c1 = new Curso(), c2 = new Curso();
+		
+		c1.aniadirAlumno(new Persona("12345678B", "Pepe", "Lopez"));		
+		c1.aniadirAlumno(new Persona("15687456J", "Andrea", "García"));		
+		c1.aniadirAlumno(new Persona("63214895O", "Luis", "Antúnez"));
+		
+		c2.aniadirAlumno(new Persona("12345678B", "Pepe", "Lopez"));		
+		c2.aniadirAlumno(new Persona("15687456J", "Andrea", "García"));
+		
+		assertEquals(3, c1.numeroAlumnos());
+		assertEquals(2, c2.numeroAlumnos());
+		assertEquals(1, c1.numeroAlumnos() - c2.numeroAlumnos());
+		
 	}
 
 	@Test
