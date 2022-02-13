@@ -8,26 +8,32 @@ public class Persona{
 	
 	public Persona() {}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * Constructor para crear una nueva persona pasando todos los atributos como parámetro
+	 * @param dni DNI de la persona
+	 * @param nombre Nombre de la persona
+	 * @param apellido1 Apellido de la persona
+	 */
 	public Persona(String dni, String nombre, String apellido1) {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido1 = apellido1;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * Obtiene el DNI de la persona
+	 * @return Cadena con el DNI de la persona
+	 */
 	public String getDni() {
 		return dni;
 	}
 	
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * Cambia el DNI de la persona en cuestión
+	 * @param dni Nuevo DNI
+	 * @throws Exception si el último carácter del nuevo DNI no es una letra
+	 */
 	public void setDni(String dni) throws Exception {
 		//comprobacion de si el ultimo caracter es una letra
 		if(Character.isLetter(dni.charAt(dni.length() - 1))) {
@@ -37,30 +43,34 @@ public class Persona{
 		}
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * Obtiene el nombre de la persona en cuestión
+	 * @return Cadea con el nombre de la persona
+	 */
 	public String getNombre() {
 		return nombre;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * Cambia el nombre de la persona
+	 * @param nombre Nuevo nombre
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * Obtiene el apellido de la persona en cuestión
+	 * @return Cadena con el apellido de la persona
+	 */
 	public String getApellido1() {
 		return apellido1;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * Cambia el apellido de la persona
+	 * @param apellido1 Nuevo apellido
+	 */
 	public void setApellido1(String apellido1) {
 		this.apellido1 = apellido1;
 	}
